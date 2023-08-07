@@ -267,11 +267,12 @@ body {
         flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 16px;
-        width: 268px;
+        width: 320px;
         margin-bottom: 48px;
     }
 
-    &__filter-item {}
+    &__filter-item {
+    }
 
     &__filter-button {
         color: var(--iris);
