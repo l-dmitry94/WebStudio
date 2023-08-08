@@ -1,0 +1,365 @@
+@media (max-width: 428px) {
+    .address {
+        &__phone {
+            font-size: 24px;
+        }
+    }
+}
+@media (min-width: 768px) {
+
+    .header {
+        padding: 0;
+
+        &__left {
+            display: flex;
+            align-items: center;
+            gap: 120px;
+        }
+
+        &__nav,
+        & .address {
+            display: block;
+        }
+
+        & .menu {
+            flex-direction: row;
+
+            &__link {
+                position: relative;
+                display: inline-block;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                transition: color var(--transition);
+                padding: 24px 0;
+
+                &.current::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: var(--ocean);
+                    border-radius: 2px;
+                }
+
+                &:is(:hover, :focus) {
+                    color: var(--ocean);
+                }
+            }
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        & .address {
+            margin-bottom: 0;
+
+            &__list {
+                gap: 12px;
+            }
+
+            &__list-link {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.17;
+
+                &:is(:hover, :focus) {
+                    color: var(--ocean);
+                }
+            }
+        }
+    }
+
+    .hero {
+        padding: 112px 0;
+
+        &__title {
+            max-width: 496px;
+            font-size: 56px;
+            margin-bottom: 36px;
+        }
+    }
+
+    .features {
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 24px;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 24px) / 2);
+        }
+
+        &__item-title {
+            text-align: left;
+        }
+
+        &__item-text {
+
+            & br {
+                display: block;
+            }
+        }
+    }
+
+    .team {
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+            row-gap: 64px;
+            max-width: 100%;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 24px) / 2);
+        }
+    }
+
+    .customers {
+
+        &__list {
+            column-gap: 24px;
+            max-width: 552px;
+            margin: 0 auto;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 48px) / 3);
+        }
+    }
+
+    .portfolio {
+        padding: 64px 0 96px;
+
+        & .container {
+            max-width: 768px;
+        }
+
+        &__filter {
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 64px;
+        }
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 24px) / 2);
+        }
+    }
+
+    .footer {
+
+        &__block {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+            row-gap: 72px;
+        }
+
+        & .logo {
+            text-align: left;
+        }
+
+        &__title {
+            text-align: left;
+        }
+
+        &__form {
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        &__form-input {
+            width: 264px;
+        }
+    }
+
+    .modal {
+
+        &__content {
+            width: 408px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1157px) {
+    .features {
+
+        & .container {
+            max-width: 100%;
+        }
+    }
+
+    .team {
+
+        & .container {
+            max-width: 584px;
+        }
+    }
+
+    .customers {
+
+        & .container {
+            max-width: 584px;
+        }
+    }
+
+    .footer {
+        & .container {
+            max-width: 584px;
+        }
+    }
+}
+
+@media (min-width: 1158px) {
+
+    .header {
+        &__left {
+            gap: 76px;
+        }
+
+        & .address {
+            &__list {
+                flex-direction: row;
+                gap: 40px;
+            }
+
+            &__list-link {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .hero {
+        padding: 188px 0;
+    }
+
+    .features {
+        padding: 120px 0;
+
+        & .container {
+            max-width: 1160px;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 72px) / 4);
+        }
+
+        &__item-block {
+            display: flex;
+        }
+
+        &__item-title {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        &__item-text {
+            font-weight: 400;
+        }
+    }
+
+    .works {
+        display: block;
+        margin-bottom: 120px;
+
+        &__list {
+            display: flex;
+            gap: 24px;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 48px) / 3);
+        }
+    }
+
+    .team {
+        padding: 120px 0;
+
+        &__list {
+            flex-wrap: nowrap;
+            max-width: 100%;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 72px) / 4);
+        }
+    }
+
+    .customers {
+        padding: 120px 0;
+
+        & .container {
+            max-width: 1160px;
+        }
+
+        &__list {
+            column-gap: 24px;
+            max-width: 100%;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 120px) / 6);
+        }
+    }
+
+    .portfolio {
+        & .container {
+            max-width: 1160px;
+        }
+
+        &__list {
+            row-gap: 48px;
+        }
+
+        &__list-item {
+            flex-basis: calc((100% - 48px) / 3);
+        }
+    }
+
+    .footer {
+        & .container {
+            max-width: 1160px;
+        }
+
+        &__block {
+            flex-wrap: nowrap;
+            gap: 0;
+        }
+
+        &__info {
+            margin-right: 120px;
+        }
+
+        &__social {
+            margin-right: 80px;
+        }
+
+        & .socials {
+            gap: 16px;
+        }
+
+        &__form-input {
+            opacity: 1;
+        }
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../img/retina/hero-bg@2x.jpg);
+    }
+  }

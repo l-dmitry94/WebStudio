@@ -13,13 +13,46 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container ">
             <div class="header__block">
                 <div class="header__left">
                     <a class="logo" href="./">
                         Web<span class="logo__color">Studio</span>
                     </a>
+                    <nav class="header__nav">
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a class="menu__link current" href="./">
+                                    Studio
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./portfolio.html">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+                <address class="address">
+                    <ul class="address__list">
+                        <li class="address__list-item">
+                            <a class="address__list-link" href="mailTo:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="address__list-item">
+                            <a class="address__list-link" href="tel:+110001111111">
+                                +11 (000) 111-11-11
+                            </a>
+                        </li>
+                    </ul>
+                </address>
                 <button class="header__burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="header__burger-icon">
                         <use href="./img/icons.svg#icon-burger"></use>
@@ -48,15 +81,25 @@
                 <h2 class="visually-hidden">Features</h2>
                 <ul class="features__list">
                     <li class="features__list-item">
+                        <div class="features__item-block">
+                            <svg class="features__item-icon">
+                                <use href="./img/icons.svg#icon-antenna"></use>
+                            </svg>
+                        </div>
                         <h3 class="features__item-title">
                             Strategy
                         </h3>
                         <p class="features__item-text">
-                            Our goal is to identify the business problem to walk
+                            Our goal is to identify the business <br> problem to walk
                             away with the perfect and creative solution.
                         </p>
                     </li>
                     <li class="features__list-item">
+                        <div class="features__item-block">
+                            <svg class="features__item-icon">
+                                <use href="./img/icons.svg#icon-clock"></use>
+                            </svg>
+                        </div>
                         <h3 class="features__item-title">
                             Punctuality
                         </h3>
@@ -66,6 +109,11 @@
                         </p>
                     </li>
                     <li class="features__list-item">
+                        <div class="features__item-block">
+                            <svg class="features__item-icon">
+                                <use href="./img/icons.svg#icon-diagram"></use>
+                            </svg>
+                        </div>
                         <h3 class="features__item-title">
                             Diligence
                         </h3>
@@ -76,13 +124,40 @@
                         </p>
                     </li>
                     <li class="features__list-item">
+                        <div class="features__item-block">
+                            <svg class="features__item-icon">
+                                <use href="./img/icons.svg#icon-astronaut"></use>
+                            </svg>
+                        </div>
                         <h3 class="features__item-title">
                             Technologies
                         </h3>
                         <p class="features__item-text">
-                            Design practice focused on digital experiences. We
+                            Design practice focused on digital <br> experiences. We
                             bring forth a deep passion for problem-solving.
                         </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="works">
+            <div class="container">
+                <h2 class="title">
+                    What are we doing
+                </h2>
+                <ul class="works__list">
+                    <li class="works__list-item">
+                        <img class="works__item-img" src="./img/works-1.jpg" alt="Work 1"
+                            srcset="./img/works-1.jpg 1x, ./img/retina/works-1@2x.jpg 2x">
+                    </li>
+                    <li class="works__list-item">
+                        <img class="works__item-img" src="./img/works-2.jpg" alt="Work 2"
+                            srcset="./img/works-2.jpg 1x, ./img/retina/works-2@2x.jpg 2x">
+                    </li>
+                    <li class="works__list-item">
+                        <img class="works__item-img" src="./img/works-3.jpg" alt="Work 3"
+                            srcset="./img/works-3.jpg 1x, ./img/retina/works-3@2x.jpg 2x">
                     </li>
                 </ul>
             </div>
@@ -437,8 +512,6 @@
                         </a>
                     </li>
                 </ul>
-
-
             </address>
             <ul class="socials">
                 <li class="socials__item">
@@ -535,10 +608,10 @@
                                 <use href="./img/icons.svg#icon-check"></use>
                             </svg>
                         </span>
-                        <p class="modal__checkbox-text">
+                        <span class="modal__checkbox-text">
                             I accept the terms and conditions of the
                             <a class="modal__checkbox-link" href="#">Privacy Policy</a>
-                        </p>
+                        </span>
                     </label>
                 </div>
                 <button class="modal__button" type="submit">

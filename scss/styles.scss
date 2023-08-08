@@ -27,10 +27,10 @@ body {
 }
 
 .container {
-    max-width: 428px;
+    min-width: 320px;
+    max-width: 1160px;
     padding: 0 16px;
     margin: 0 auto;
-
 }
 
 .header {
@@ -42,6 +42,11 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &__nav,
+    & .address {
+        display: none;
     }
 
     &__burger-icon {
@@ -81,7 +86,7 @@ body {
         font-size: 36px;
         line-height: 1.11;
         text-transform: capitalize;
-        margin: 0 auto 72px; 
+        margin: 0 auto 72px;
     }
 
     &__button {
@@ -107,17 +112,33 @@ body {
 .features {
     padding: 96px 0;
 
+    & .container {
+        max-width: 428px;
+    }
+
     &__list {
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-        flex-wrap: wrap;
         gap: 72px;
     }
 
     &__list-item {
         flex-basis: 100%;
+    }
+
+    &__item-block {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: var(--cloud);
+        padding: 24px 0;
+        margin-bottom: 8px;
+    }
+
+    &__item-icon {
+        width: 64px;
+        height: 64px;
     }
 
     &__item-title {
@@ -132,7 +153,15 @@ body {
 
     &__item-text {
         line-height: 1.5;
+
+        & br {
+            display: none;
+        }
     }
+}
+
+.works {
+    display: none;
 }
 
 .team {
@@ -224,6 +253,10 @@ body {
 .customers {
     padding: 96px 0;
 
+    & .container {
+        max-width: 428px;
+    }
+
     &__list {
         display: flex;
         justify-content: center;
@@ -262,6 +295,10 @@ body {
 .portfolio {
     padding: 48px 0;
 
+    & .container {
+        max-width: 428px;
+    }
+
     &__filter {
         display: flex;
         flex-wrap: wrap;
@@ -271,8 +308,7 @@ body {
         margin-bottom: 48px;
     }
 
-    &__filter-item {
-    }
+    &__filter-item {}
 
     &__filter-button {
         color: var(--iris);
@@ -287,9 +323,6 @@ body {
         &:is(:hover, :focus) {
             color: var(--white);
             background-color: var(--ocean);
-        }
-
-        &:is(:hover, :focus) {
             box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
         }
     }
@@ -355,6 +388,10 @@ body {
 .footer {
     background-color: var(--navyblue);
     padding: 96px 0;
+
+    & .container {
+        max-width: 428px;
+    }
 
     &__block {
         display: flex;
@@ -671,6 +708,7 @@ body {
 
 .address {
     margin-bottom: 48px;
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -681,6 +719,7 @@ body {
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.4px;
+        transition: color var(--transition);
     }
 
     &__phone {
@@ -717,3 +756,5 @@ body {
         height: 8px;
     }
 }
+
+@import "media";
